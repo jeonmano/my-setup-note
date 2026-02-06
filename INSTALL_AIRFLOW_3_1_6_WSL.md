@@ -224,6 +224,15 @@ pip show PyJWT
 pip install "PyJWT==2.10.1"
 ```
 
+## postgresql 커넥션이 없음
+<img width="922" height="372" alt="image" src="https://github.com/user-attachments/assets/5b89b357-fef4-40ad-8565-22c1426645b9" />
+```
+((airflow_env) ) [appadmin@DESKTOP-3U0O7D9 airflow]$ pip install apache-airflow-providers-postgres
+
+((airflow_env) ) [appadmin@DESKTOP-3U0O7D9 airflow]$ pip list | grep postgres
+apache-airflow-providers-postgres        6.5.3
+```
+
 
 
 

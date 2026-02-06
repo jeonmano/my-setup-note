@@ -89,7 +89,7 @@ jwt_secret = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
 jwt_issuer=airflow
 ```
 
-# systemd servier 등록
+# systemd service 등록
 ``` shell
 sudo tee /etc/systemd/system/airflow-api-server.service <<EOF
 [Unit]

@@ -69,7 +69,7 @@ airflow users create --username admin --firstname admin --lastname admin --role 
 executor = LocalExecutor
 load_examples = False
 secret_key = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
-execution_api_server_url = http://localhost:8081/execution
+execution_api_server_url = http://localhost:8080/execution
 auth_manager = airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
 fernet_key = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
 [database]
@@ -81,12 +81,13 @@ secret_key = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
 secret_key = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
 execution_api_secret_key = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
 auth_backends = airflow.providers.fab.auth_manager.api.auth.backend.session,airflow.providers.fab.auth_manager.api.auth.backend.basic_auth
-port=8081
+port=8080
 [auth]
 jwt_secret = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
 
 [api_auth]
 jwt_issuer=airflow
+jwt_secret = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
 ```
 
 # systemd service 등록

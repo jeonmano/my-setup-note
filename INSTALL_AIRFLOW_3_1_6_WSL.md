@@ -71,7 +71,7 @@ load_examples = False
 secret_key = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
 execution_api_server_url = http://localhost:8080/execution
 auth_manager = airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
-fernet_key = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
+fernet_key = ASnPlM78jbVTcjzYIyf61Ln3PFse2T-khYViJT_o57Y=
 [database]
 sql_alchemy_conn = postgresql+psycopg2://airflow:airflow@172.29.128.1:5432/airflow_db_wsl
 [webserver]

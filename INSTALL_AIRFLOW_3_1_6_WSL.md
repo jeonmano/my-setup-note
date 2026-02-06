@@ -213,7 +213,6 @@ New-NetFirewallRule -DisplayName "WSL2 Inbound" -InterfaceAlias "vEthernet (WSL 
 아래 정보 추가 OR 확인
 [webserver]
 secret_key = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
-web_server_port = 8081
 ```
 
 ## TypeError: Issuer (iss) must be a string 

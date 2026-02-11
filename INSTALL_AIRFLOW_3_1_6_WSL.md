@@ -90,6 +90,39 @@ jwt_issuer=airflow
 jwt_secret = def2a1e5f0535f2390be793e90fb0ca957d7a031356b982148755fdab698
 ```
 
+# airflow 3.1.7 (celery + redis)
+```
+[core]
+executor = CeleryExecutor
+dags_forder = /home/appadmin/workspace/airflow/dags
+load_examples = False
+secret_key = 비밀키
+execution_api_server_url = http://127.0.0.1:8080/executiuon
+auth_manager = airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
+fernet_key = 비밀키
+
+[database]
+sql_alchemy_conn = postgresql+psycopg2://airflow:airflow@[localip]:5432/airflow_db_317
+
+[api]
+secret_key = 비밀키
+auth_backends = airflow.providers.fab.auth_manager.api.auth.backend.session,airflow.providers.fab.auth_manager.api.auth.backend.basic_auth,airflow.api_auth.backend.default
+workers = 4
+
+[logging]
+base_log_folder = /home/appadmin/workspace/airflow/logs
+
+[api_auth]
+jwt_issuer = airflow
+jwt_secret = 비밀키
+
+[celery]
+broker_url = redis://:appadmin@127.0.0.1:6379/0
+result_backend = db+postgresql://airflow:airflow@[localip]:5432/airflow_db_317
+worker_concurrency = 16
+```
+
+
 # systemd service 등록
 ``` shell
 sudo tee /etc/systemd/system/airflow-api-server.service <<EOF

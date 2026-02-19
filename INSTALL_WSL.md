@@ -71,3 +71,10 @@ wsl --shutdown
 | 기본값 설정 | `wsl -s <이름>` | 기본 실행 배포판 변경 |
 | 강제 종료 | `wsl -t <이름>` | 특정 배포판만 즉시 종료 |
 | 버전 변경 | `wsl --set-version <이름> 2` | WSL1에서 WSL2로 변환 |
+
+
+## 6. 방화벽
+```
+# WSL에서 윈도우 PostgreSQL(5432)로 접속할 수 있도록 허용하는 규칙 추가
+New-NetFirewallRule -DisplayName "Allow WSL to Postgres" -Direction Inbound -LocalPort 5432 -Protocol TCP -Action Allow
+```

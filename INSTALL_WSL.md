@@ -73,8 +73,15 @@ wsl --shutdown
 | 버전 변경 | `wsl --set-version <이름> 2` | WSL1에서 WSL2로 변환 |
 
 
-## 6. 방화벽
+## 6. 트러블 슈팅
+### WSL 방화벽
 ```
 # WSL에서 윈도우 PostgreSQL(5432)로 접속할 수 있도록 허용하는 규칙 추가
 New-NetFirewallRule -DisplayName "Allow WSL to Postgres" -Direction Inbound -LocalPort 5432 -Protocol TCP -Action Allow
+```
+### Local PC와 WSL IP를 동기화 해서 사용할 수 있음
+C:\Users\minho\ 하위에 .wslconfig 파일을 생성해서 아래 내용 입력
+```
+[wsl2]
+networkingMode=mirrored
 ```

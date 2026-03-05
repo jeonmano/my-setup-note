@@ -118,12 +118,12 @@ jwt_secret = 비밀키
 
 [celery]
 broker_url = redis://:appadmin@127.0.0.1:6379/0
-#broker_url = sentinel://:appadmin@10.10.10.10:26379/0;sentinel://:appadmin@10.10.10.11:26379/0;sentinel://:appadmin@10.10.10.12:26379/0;
+#broker_url = sentinel://:appadmin@10.10.10.10:26379/0;sentinel://:appadmin@10.10.10.11:26379/0;sentinel://:appadmin@10.10.10.12:26379/0;  //sentinel 사용시
 result_backend = db+postgresql://airflow:airflow@[localip]:5432/airflow_db_317
 worker_concurrency = 16
 
-[celery_broker_transport_options]
-master_name = mymaster
+#[celery_broker_transport_options] //sentinel 사용시
+#master_name = mymaster  //sentinel 사용시
 ```
 
 

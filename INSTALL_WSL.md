@@ -85,3 +85,10 @@ C:\Users\minho\ 하위에 .wslconfig 파일을 생성해서 아래 내용 입력
 [wsl2]
 networkingMode=mirrored
 ```
+
+### wsl 접속시 default 계정 설정
+/etc/wsl.conf 에 설정
+```
+[user]
+default=minho
+```

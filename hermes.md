@@ -5,6 +5,11 @@
 minho@DESKTOP-3U0O7D9:~$ sudo apt-get update
 ```
 
+# github cli
+```
+
+```
+
 
 # codex setup
 
@@ -58,7 +63,7 @@ Next steps:
      `hermes setup`.
 ```
 
-# slakc 연계
+# slack 연계
 - https://api.slack.com/apps 생성 후 bot id, app id, slack userid, slack channel id 사용해서 연계
 - <img width="907" height="185" alt="image" src="https://github.com/user-attachments/assets/855b6b0c-c726-4a92-a17c-36b3a044388e" />
 

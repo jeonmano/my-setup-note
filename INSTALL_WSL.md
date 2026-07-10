@@ -78,6 +78,9 @@ wsl --shutdown
 ```
 # WSL에서 윈도우 PostgreSQL(5432)로 접속할 수 있도록 허용하는 규칙 추가
 New-NetFirewallRule -DisplayName "Allow WSL to Postgres" -Direction Inbound -LocalPort 5432 -Protocol TCP -Action Allow
+
+- hermes 
+New-NetFirewallRule -DisplayName "WSL2 Hermes Dashboard Allow" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 9119
 ```
 ### Local PC <-> WSL IP 미러링
 C:\Users\minho\ 하위에 .wslconfig 파일을 생성해서 아래 내용 입력

@@ -85,6 +85,8 @@ New-NetFirewallRule -DisplayName "WSL2 Hermes Dashboard Allow" -Direction Inboun
 Remove-NetFirewallRule -DisplayName "WSL2 Hermes Dashboard Allow"
 - hermes 규칙 확인
 Get-NetFirewallRule -DisplayName "WSL2 Hermes Dashboard Allow"
+- ssh port 등록
+New-NetFirewallRule -DisplayName "WSL2 SSH" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 2022
 ```
 ### Local PC <-> WSL IP 미러링
 C:\Users\minho\ 하위에 .wslconfig 파일을 생성해서 아래 내용 입력

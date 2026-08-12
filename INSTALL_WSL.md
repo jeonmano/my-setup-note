@@ -111,3 +111,10 @@ FallbackDNS=1.0.0.1 8.8.4.4
 ```
 
 sudo systemctl restart systemd-resolved
+
+### wsl systemd 사용 설정
+/etc/wsl.conf 변경
+```
+[boot]
+systemd=true
+```

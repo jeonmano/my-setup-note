@@ -101,3 +101,13 @@ networkingMode=mirrored
 [user]
 default=minho
 ```
+
+### wsl 재기동 시 domain 못찾는 문제
+/etc/systemd/resolved.conf 변경
+```
+[Resolve]
+DNS=1.1.1.1 8.8.8.8
+FallbackDNS=1.0.0.1 8.8.4.4
+```
+
+sudo systemctl restart systemd-resolved
